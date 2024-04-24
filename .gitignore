@@ -1,0 +1,44 @@
+# Dependency directories
+node_modules/
+
+# Environment variables file
+.env
+
+# Build files
+build/
+dist/
+*.log
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and debugging files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# Test coverage directory
+coverage/
+
+# Editor configuration
+*.editorconfig
+
+# Dependency directories
+pnpm-lock.yaml
+.pnpm/
+
+# Next.js bu
