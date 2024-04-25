@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { addIntrest, addResultLink, addTestLink, apply, changeJobExamStatus, createJob, getAllJobs, getApplications } from "../controllers/JobController.js";
+import { addIntrest, addResultLink,deleteJob, addTestLink, apply, changeJobExamStatus, createJob, getAllJobs, getApplications } from "../controllers/JobController.js";
 import { checkAuth } from "../middlewares/UserMiddleWare.js";
 const router = express.Router();
 
@@ -13,5 +13,6 @@ router.post('/addIntrest',checkAuth,addIntrest);
 router.post('/addResultLink',checkAuth,addResultLink);
 router.post('/addTestLink',checkAuth,addTestLink);
 router.post('/changeJobExamStatus',checkAuth,changeJobExamStatus);
+router.post('/deleteJob',checkAuth,deleteJob);
 
 export default router;

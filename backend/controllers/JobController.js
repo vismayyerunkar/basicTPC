@@ -43,6 +43,22 @@ export const createJob = async (req, res) => {
     }
 };
 
+export const deleteJob = async (req, res) => {
+    try {
+    if(!req.isAdmin){
+        return res.status(400).json({ message: 'Permission denied' });
+    }
+      const { jobId } = req.body;
+  
+      const resp = await JobModel.deleteOne({_id:jobId})
+
+      res.status(200).json({message:"Job deleted successfully",success:true});
+    } catch (error) {
+      console.error('Error creating job:', error);
+      res.status(500).json({ message: 'Internal server error' });
+    }
+};
+
 
 export const addIntrest = async (req, res) => {
     try {
